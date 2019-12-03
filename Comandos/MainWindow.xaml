@@ -35,6 +35,12 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
+
+        <ContextMenu x:Key="ContextMenu">
+            <MenuItem Header="Copiar" Command="ApplicationCommands.Copy"/>
+            <MenuItem Header="Pegar" Command="ApplicationCommands.Paste"/>
+        </ContextMenu>
+        
     </Window.Resources>
     
     <DockPanel>
@@ -105,7 +111,7 @@
                            Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:MainWindow}}, Path=Hora.Hora}"/>
             </StatusBarItem>
         </StatusBar>
-        <ListBox x:Name="ListBox" ItemsSource="{Binding}"
+        <ListBox x:Name="ListBox" ItemsSource="{Binding}" ContextMenu="{StaticResource ContextMenu}"
                  SelectedItem="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:MainWindow}}, Path=EtiquetaSeleccionada, Mode=OneWayToSource}"/>
     </DockPanel>
 </Window>
