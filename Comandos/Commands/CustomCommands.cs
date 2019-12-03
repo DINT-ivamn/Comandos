@@ -16,7 +16,7 @@ namespace Comandos.Commands
                 typeof(CustomCommands),
                 new InputGestureCollection()
                 {
-                    new KeyGesture(Key.V, ModifierKeys.Alt)
+                    new KeyGesture(Key.S, ModifierKeys.Control)
                 }
             );
     }
