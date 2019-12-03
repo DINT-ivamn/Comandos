@@ -46,16 +46,6 @@ namespace Comandos
             e.CanExecute = Etiquetas.Count < 10;
         }
 
-        private void DeleteCommand_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            Etiquetas.Clear();
-        }
-
-        private void DeleteCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
-        {
-            e.CanExecute = Etiquetas.Count > 0;
-        }
-
         private void CopyCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             EtiquetaPortapapeles = (Etiqueta) ListBox.SelectedItem;
@@ -80,6 +70,16 @@ namespace Comandos
         private void ExitCommand_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             Close();
+        }
+
+        private void ClearCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Etiquetas.Clear();
+        }
+
+        private void ClearCommand_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = Etiquetas.Count > 0;
         }
     }
 }

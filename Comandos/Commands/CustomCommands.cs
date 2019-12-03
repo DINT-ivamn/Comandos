@@ -19,5 +19,16 @@ namespace Comandos.Commands
                     new KeyGesture(Key.S, ModifierKeys.Control)
                 }
             );
+
+        public static readonly RoutedUICommand Clear = new RoutedUICommand
+            (
+                "Clear",
+                "Clear",
+                typeof(CustomCommands),
+                new InputGestureCollection()
+                {
+                    new KeyGesture(Key.V, ModifierKeys.Alt)
+                }
+            );
     }
 }

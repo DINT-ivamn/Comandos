@@ -9,7 +9,7 @@
         Title="Comandos y menús" Height="450" Width="800" Icon="Img/menu.ico">
     <Window.CommandBindings>
         <CommandBinding x:Name="NewCommand" Command="ApplicationCommands.New" Executed="NewCommand_Executed" CanExecute="NewCommand_CanExecute"/>
-        <CommandBinding x:Name="DeleteCommand" Command="ApplicationCommands.Delete" Executed="DeleteCommand_Executed" CanExecute="DeleteCommand_CanExecute"/>
+        <CommandBinding x:Name="ClearCommand" Command="commands:CustomCommands.Clear" Executed="ClearCommand_Executed" CanExecute="ClearCommand_CanExecute"/>
         <CommandBinding x:Name="CopyCommand" Command="ApplicationCommands.Copy" Executed="CopyCommand_Executed" CanExecute="CopyCommand_CanExecute"/>
         <CommandBinding x:Name="PasteCommand" Command="ApplicationCommands.Paste" Executed="PasteCommand_Executed" CanExecute="PasteCommand_CanExecute"/>
         <CommandBinding x:Name="ExitCommand" Command="commands:CustomCommands.Exit" Executed="ExitCommand_Executed"/>
@@ -64,7 +64,7 @@
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator/>
-                <MenuItem Header="_Vaciar" Command="ApplicationCommands.Delete">
+                <MenuItem Header="_Vaciar" Command="commands:CustomCommands.Clear">
                     <MenuItem.Icon>
                         <Image Source="Img/delete.ico"/>
                     </MenuItem.Icon>
@@ -91,7 +91,7 @@
                 <Button Command="ApplicationCommands.Paste">
                     <Image Source="Img/paste.ico"/>
                 </Button>
-                <Button Command="ApplicationCommands.Delete">
+                <Button Command="commands:CustomCommands.Clear">
                     <Image Source="Img/delete.ico"/>
                 </Button>
             </ToolBar>
